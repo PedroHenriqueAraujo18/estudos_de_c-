@@ -1,0 +1,27 @@
+#include <iostream>
+#include <string>
+#include<math.h>
+using namespace std;
+
+// Função para calcular o novo salário ajustado
+float volumeCubo(float aresta ) {
+ float resultado = pow(aresta,3);
+ return resultado;
+}
+
+int main(void) {
+
+float aresta,res;
+   do {
+    cout << "Digite o Volume: ";
+    cin >> aresta;
+        if (aresta > 0) {
+          res = volumeCubo(aresta);  
+            cout << "Volume do cubo:\t" << res << endl;
+        } else {
+            cout << "Percentual inválido. Tente novamente." << endl;
+        }
+    } while (aresta <= 0);
+
+    return 0;
+}

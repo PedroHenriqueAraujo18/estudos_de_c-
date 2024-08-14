@@ -1,0 +1,33 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+// Função para calcular o novo salário ajustado
+float salarioMensal(float salarioFuncionario, float reajustePercentual) {
+    float novoSalario = salarioFuncionario + (salarioFuncionario * reajustePercentual / 100);
+    return novoSalario;
+}
+
+int main() {
+    string nome;
+    float salarioAtual, salarioReajustado, percentual = 0;
+
+    // Solicitar o nome do funcionário e o salário atual
+    cout << "Digite o Nome do funcionário: ";
+    cin >> nome;
+    cout << "Digite o Salario atual: ";
+    cin >> salarioAtual;
+    do {
+        cout << "Digite o percentual de reajuste (maior que zero): ";
+        cin >> percentual;
+
+        if (percentual > 0) {
+            salarioReajustado = salarioMensal(salarioAtual, percentual);
+            cout << "Novo Salario de " << nome << " : " << salarioReajustado << endl;
+        } else {
+            cout << "Percentual inválido. Tente novamente." << endl;
+        }
+    } while (percentual <= 0);
+
+    return 0;
+}

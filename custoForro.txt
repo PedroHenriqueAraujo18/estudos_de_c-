@@ -1,0 +1,30 @@
+#include <iostream>
+
+
+
+float custoForro(float metro,float precoMetro ) {
+ float custo  = metro * precoMetro;
+ 
+ return custo;
+}
+
+int main(void) {
+
+float comprimento,largura,metro,preco,res;
+   do {
+    std::cout << "Digite o Comprimento: " <<std::endl;
+    std::cin >> comprimento;
+        if (comprimento > 0) {
+            std::cout<< "Digite a largura:" << std::endl;
+            std::cin >> largura;
+            metro = comprimento * largura;
+            std::cout <<"Digite o preço por metro:" << std::endl;
+            
+            std::cin >> preco;
+          res = custoForro(metro,preco);  
+            std::cout << "Custo:\t" << res << std::endl;
+        } else {
+            std::cout << "Percentual inválido. Tente novamente." << std::endl;
+        }
+    } while (comprimento < 0);
+}

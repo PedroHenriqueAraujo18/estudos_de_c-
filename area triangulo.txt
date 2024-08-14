@@ -1,0 +1,25 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+
+//base * altura / 2
+float calcularAreaTriangulo(float base, float altura){
+    float res =  (base * altura)/2;
+    return res;
+}
+
+
+int main(){
+    
+    float base,altura,res;
+    cout<<"Digite a base do triangulo:" << endl;
+    cin >>base;
+    cout<<"Digite a altura do triangulo: "<<endl;
+    cin>>altura;
+    res = calcularAreaTriangulo(base,altura);
+    cout<<"Resultado :"<< res << endl;
+    
+    return 0;
+    
+    
+}

@@ -1,0 +1,26 @@
+#include <iostream>
+
+
+
+float gastoCombustivel(float km,float totalCombustivel ) {
+ float consumo = km/totalCombustivel;
+ 
+ return consumo;
+}
+
+int main(void) {
+
+float km,comm,res;
+   do {
+    std::cout << "Digite a Distância: " <<std::endl;
+    std::cin >> km;
+        if (km > 0) {
+            std::cout<< "Digite o totalCombustivel:" << std::endl;
+            std::cin >> comm;
+          res = gastoCombustivel(km,comm);  
+            std::cout << "Consumo de combustivel em litros:\t" << res << std::endl;
+        } else {
+            std::cout << "Percentual inválido. Tente novamente." << std::endl;
+        }
+    } while (km < 0);
+}

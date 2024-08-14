@@ -1,0 +1,14 @@
+#include <iostream>
+
+using namespace std;
+
+int main(int argc, char** argv){
+int a,b,soma;
+cout << "Digite para A:";
+cin >> a;
+cout <<"Digite para B:";
+cin >> b;
+soma = a+b;
+cout << soma << '\n';
+return 0;
+}
